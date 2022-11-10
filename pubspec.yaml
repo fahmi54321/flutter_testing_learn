@@ -38,6 +38,8 @@ dependencies:
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
+  integration_test: # todo1 (next home_screen)
+    sdk: flutter
   flutter_test:
     sdk: flutter
 

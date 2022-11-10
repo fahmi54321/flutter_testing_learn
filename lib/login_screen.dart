@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_testing_learn/home_screen.dart';
 import 'package:flutter_testing_learn/validator.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -35,7 +36,15 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: 30.0),
               ElevatedButton(
                 onPressed: () {
-                  formKey.currentState?.validate();
+                  //todo 3 (login_flow_test)
+                  if (formKey.currentState?.validate() == true) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const HomeScreen(),
+                      ),
+                    );
+                  }
                 },
                 child: const Text('Simpan'),
               ),
