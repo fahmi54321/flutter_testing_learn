@@ -39,7 +39,7 @@ void main() {
     expect(keyEmail, findsOneWidget);
   });
 
-  testWidgets('Testign temukan value key widget input password', (
+  testWidgets('Testing temukan value key widget input password', (
     WidgetTester tester,
   ) async {
     // Arrange
@@ -157,7 +157,7 @@ void main() {
   });
 
   //todo 4 (finish)
-  testWidgets('Testign email dan password valid', (WidgetTester tester) async {
+  testWidgets('Testing email dan password valid', (WidgetTester tester) async {
     // Arrange
     await tester.pumpWidget(
       MaterialApp(

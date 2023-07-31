@@ -7,6 +7,7 @@ class LoginScreen extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passController = TextEditingController();
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  final Validator validator = Validator();
 
   @override
   Widget build(BuildContext context) {
@@ -23,14 +24,14 @@ class LoginScreen extends StatelessWidget {
                 key: const ValueKey('email_field'),
                 controller: emailController,
                 decoration: const InputDecoration(labelText: 'Email'),
-                validator: (value) => Validator.validateEmail(value ?? ""),
+                validator: (value) => validator.validateEmail(value ?? ""),
               ),
               const SizedBox(height: 20.0),
               TextFormField(
                 key: const ValueKey('password_field'),
                 controller: passController,
                 decoration: const InputDecoration(labelText: 'Password'),
-                validator: (value) => Validator.validatePassword(value ?? ''),
+                validator: (value) => validator.validatePassword(value ?? ''),
               ),
               const SizedBox(height: 30.0),
               ElevatedButton(
