@@ -42,7 +42,7 @@ void main() {
   });
 
   //todo 3
-  testWidgets('Testign temukan value key widget input password', (
+  testWidgets('Testing temukan value key widget input password', (
     WidgetTester tester,
   ) async {
     // Arrange
